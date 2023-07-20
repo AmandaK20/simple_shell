@@ -9,7 +9,8 @@
 
 int rm_shell(shell *datash)
 {
-	int ishome; ishome1;
+	int ishome;
+	int ishome1;
 
 	dir = datash->args[1];
 
