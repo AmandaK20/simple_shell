@@ -18,4 +18,5 @@ void set_data(shell *datash)
 
 	set(datash->_environ);
 	set(datash->pid);
+	
 }

@@ -17,26 +17,26 @@ void _print_error(char *argv, int counter, char *cmd)
 	_puts(cmd);
 	_print_number(counter);
 	_puts(": ")
-		
+
 	{
 		msg = ": unable to add/to remove environment
 	}
 }
 
 /**
- * _error_execve - prints error message if
- * execve() fails
- * @cmd - executable command
- * @counter: counts commands
- * @argv - argument vector
- * 
- * Return: 0
- */
+*_error_execve - prints error message if
+*execve() fails
+*@cmd - executable command
+*@counter: counts commands
+*@argv - argument vector
+*
+*Return: 0
+*/
 
 void _error_execve(char *argv, int counter, char *cmd)
-{ 
-free(error);
-return (0)
- end (1)
+{
+	free(error);
+	return (0)
+	end (1)
 }
 
