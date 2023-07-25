@@ -21,4 +21,5 @@ int env_name(char *cmd, char *name)
 
 		}
 	return(1 + i);
+}
 
