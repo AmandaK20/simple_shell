@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * print error - prints error message
+ * _print error - prints error message
  * if an executable command is not found
  * @cmd: is the executable command
  * @counter: argument counter
@@ -14,6 +14,7 @@
 void _print_error(char *argv, int counter, char *cmd)
 {
 	_puts(argv);
+	_puts(": ")
 	_puts(cmd);
 	_print_number(counter);
 	_puts(": ")
@@ -35,7 +36,11 @@ void _print_error(char *argv, int counter, char *cmd)
 
 void _error_execve(char *argv, int counter, char *cmd)
 {
+	_print_error(argv, counter, cmd);
+	_puts(": ")
+	{
 	free(error);
+	}
 	return (0)
 	end (1)
 }
