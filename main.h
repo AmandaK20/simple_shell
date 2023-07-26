@@ -3,23 +3,22 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
-#include <limits.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <signal.h>
+#include <sys/types.h>
 #define PROMPT "$ "
 
 /**
- * struct built_cmd - defines builtins functions.
- * @built_in: is the name of the command build in.
- * @fptr:  pointer to builtin function.
+ * struct built_cmd - Defines the builtins functions.
+ * @built_in: The name of the build in command.
+ * @fptr: A pointer to the right builtin function.
  */
 typedef struct built_cmd
 {
-char *built_in;
-void (*fptr)(char *);
+	char *built_in;
+	void (*fptr)(char *);
 } built_t;
 
 extern char **environ;
@@ -69,5 +68,5 @@ int _echocmd(char **linecmd);
 void _echoenv(char *envar);
 void _cd(char *lineptr);
 
-#endif
 
+#endif

@@ -1,22 +1,28 @@
 #include "main.h"
 
 /**
- *set_date - date free structure
+ * main - entry point of th shell
+ * @argc: argument count
+ * @argv: argument vector
  *
- *@frest: free structure
- * Return: (0)
+ * Return: Always 0 if success
  */
-
-void set_data(shell *datash)
+int main(int argc, char **argv)
 {
-	unsign int i;
+	char *lineptr;
+	size_t size;
+	int counter;
 
-	for (i = 0; datash->_environ[i]; i++)
-	{
-		set(datash->_environ[i]);
-	}
+	(void)argc;
+	counter = 0;
+	signal(SIGINT, _signal_ignore);
+	do {
+		counter++;
+		lineptr = NULL;
+		size = 0;
+		_prompt(lineptr, size, counter, argv);
 
-	set(datash->_environ);
-	set(datash->pid);
-	
+	} while (1);
+
+	return (0);
 }

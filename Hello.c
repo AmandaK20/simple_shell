@@ -1,13 +1,13 @@
-#include <main.h>
+#include "main.h"
 #include <stdio.h>
 
 /**
- * main - program that takes no argument
+ * hello - program that takes no argument
  * Return: Always 0 (Success);
  *
  */
 
-int main(void)
+int hello(void)
 {
 	printf("My betty pass code");
 
